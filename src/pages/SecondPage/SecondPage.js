@@ -18,11 +18,6 @@ function SecondPage() {
           <nav className="col-md-auto navbar">
             <ul className="navbar-nav">
               <li className="nav-item">
-                <a className="nav-link" href="/second">
-                  HOME
-                </a>
-              </li>
-              <li className="nav-item">
                 <a
                   className="nav-link"
                   href="https://doprava-oprava.jednoduse.cz/"
@@ -79,11 +74,8 @@ function SecondPage() {
           </a>
         </h4>
         <h5>
-          <a href="/second">Home</a>
-        </h5>
-        <h6>
           <a href="https://stehovaci-prace9.webnode.cz/">Stehovaci prace</a>
-        </h6>
+        </h5>
       </div>
       <h1>COPYRIGHT ©company</h1>
     </div>

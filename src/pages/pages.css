@@ -76,16 +76,6 @@ h5 {
   transform: translate(20px, 30px) rotate(125deg);
 }
 
-h6 {
-  box-shadow: -2em 0 2em white;
-  background-position: 19rem;
-  width: 250px;
-  height: 250px;
-  background-image: url("../img/bolehlav_img.jpg");
-  margin: 90px 50px 150px;
-  transform: translate(20px, 30px) rotate(125deg);
-}
-
 li {
   font-family: "Courier New", Courier, monospace;
   text-shadow: white 4px 0 9px;
