@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/sdw/static/css/main.b1e2c12c.chunk.css",
-    "main.js": "/sdw/static/js/main.18e59e52.chunk.js",
-    "main.js.map": "/sdw/static/js/main.18e59e52.chunk.js.map",
-    "runtime-main.js": "/sdw/static/js/runtime-main.4b84ab36.js",
-    "runtime-main.js.map": "/sdw/static/js/runtime-main.4b84ab36.js.map",
-    "static/css/2.1a02f21c.chunk.css": "/sdw/static/css/2.1a02f21c.chunk.css",
-    "static/js/2.ac4a3396.chunk.js": "/sdw/static/js/2.ac4a3396.chunk.js",
-    "static/js/2.ac4a3396.chunk.js.map": "/sdw/static/js/2.ac4a3396.chunk.js.map",
-    "static/js/3.bbfd4f89.chunk.js": "/sdw/static/js/3.bbfd4f89.chunk.js",
-    "static/js/3.bbfd4f89.chunk.js.map": "/sdw/static/js/3.bbfd4f89.chunk.js.map",
-    "index.html": "/sdw/index.html",
-    "static/css/2.1a02f21c.chunk.css.map": "/sdw/static/css/2.1a02f21c.chunk.css.map",
-    "static/css/main.b1e2c12c.chunk.css.map": "/sdw/static/css/main.b1e2c12c.chunk.css.map",
-    "static/js/2.ac4a3396.chunk.js.LICENSE.txt": "/sdw/static/js/2.ac4a3396.chunk.js.LICENSE.txt",
-    "static/media/pages.css": "/sdw/static/media/pokrok_img.c337eaab.jpg"
+    "main.css": "/static/css/main.fe8e21b3.chunk.css",
+    "main.js": "/static/js/main.452af009.chunk.js",
+    "main.js.map": "/static/js/main.452af009.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.eb85573d.js",
+    "runtime-main.js.map": "/static/js/runtime-main.eb85573d.js.map",
+    "static/css/2.1a02f21c.chunk.css": "/static/css/2.1a02f21c.chunk.css",
+    "static/js/2.21de1eeb.chunk.js": "/static/js/2.21de1eeb.chunk.js",
+    "static/js/2.21de1eeb.chunk.js.map": "/static/js/2.21de1eeb.chunk.js.map",
+    "static/js/3.bbfd4f89.chunk.js": "/static/js/3.bbfd4f89.chunk.js",
+    "static/js/3.bbfd4f89.chunk.js.map": "/static/js/3.bbfd4f89.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/2.1a02f21c.chunk.css.map": "/static/css/2.1a02f21c.chunk.css.map",
+    "static/css/main.fe8e21b3.chunk.css.map": "/static/css/main.fe8e21b3.chunk.css.map",
+    "static/js/2.21de1eeb.chunk.js.LICENSE.txt": "/static/js/2.21de1eeb.chunk.js.LICENSE.txt",
+    "static/media/pages.css": "/static/media/pokrok_img.c337eaab.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.4b84ab36.js",
+    "static/js/runtime-main.eb85573d.js",
     "static/css/2.1a02f21c.chunk.css",
-    "static/js/2.ac4a3396.chunk.js",
-    "static/css/main.b1e2c12c.chunk.css",
-    "static/js/main.18e59e52.chunk.js"
+    "static/js/2.21de1eeb.chunk.js",
+    "static/css/main.fe8e21b3.chunk.css",
+    "static/js/main.452af009.chunk.js"
   ]
 }
