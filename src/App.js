@@ -7,11 +7,11 @@ import SecondPage from "./pages/SecondPage/SecondPage";
 function App() {
   return (
     <Switch>
-      <Route exact path="/sdw">
-        <Redirect to="/sdw/second" />
+      <Route exact path="/">
+        <Redirect to="/second" />
       </Route>
-      <Route exact path="/sdw/first" component={FirstPage} />
-      <Route exact path="/sdw/second" component={SecondPage} />
+      <Route exact path="/first" component={FirstPage} />
+      <Route exact path="/second" component={SecondPage} />
     </Switch>
   );
 }
