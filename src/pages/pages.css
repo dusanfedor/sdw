@@ -1,4 +1,4 @@
-.body {
+.body1 {
   font-size: 1.8rem;
   text-align: center;
   background: url("../img/pokrok_img.jpg");
@@ -7,20 +7,20 @@
   background-repeat: no-repeat;
 }
 
-.contentText {
+.contentText1 {
   font-style: italic;
   text-shadow: 2px 2px 5px rgb(23, 247, 154);
 }
 
-.container {
+.container1 {
   max-width: 100%;
 }
 
-.navbar {
+.navbar1 {
   align-items: baseline;
 }
 
-button {
+button1 {
   background: content-box
     radial-gradient(crimson, skyblue, orange, black, green);
   margin-bottom: 50px;
@@ -85,4 +85,9 @@ li {
   flex-direction: row;
   align-items: center;
   justify-content: center;
+}
+.flag {
+  font-size: 3rem;
+  width: 500px;
+  height: 200px;
 }
