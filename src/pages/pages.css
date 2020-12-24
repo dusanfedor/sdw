@@ -20,6 +20,23 @@
   align-items: baseline;
 }
 
+button {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.result {
+  height: 10rem;
+  width: 50rem;
+  margin: auto;
+  margin-top: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0.2rem solid green;
+}
+
 .button1 {
   margin-bottom: 50px;
   width: 350px;
