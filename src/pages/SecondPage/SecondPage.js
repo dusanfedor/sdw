@@ -12,7 +12,9 @@ function SecondPage() {
   return (
     <div className="body1" style={{ color: myColor }}>
       <h1>"Bezradnost a nespokojenost jsou prvním předpoklady k pokroku"</h1>
-      <button1 onClick={setRandomColor}>Change Color</button1>
+      <button className="button1" onClick={setRandomColor}>
+        Change Color
+      </button>
       <div className="container">
         <div className="row">
           <nav className="col-md-auto navbar">

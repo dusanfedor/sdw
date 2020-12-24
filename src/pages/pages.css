@@ -20,9 +20,7 @@
   align-items: baseline;
 }
 
-button {
-  background: content-box
-    radial-gradient(crimson, skyblue, orange, black, green);
+.button1 {
   margin-bottom: 50px;
   width: 350px;
   height: 130px;
