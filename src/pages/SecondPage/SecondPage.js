@@ -13,7 +13,7 @@ function SecondPage() {
     <div className="body1" style={{ color: myColor }}>
       <h1>"Bezradnost a nespokojenost jsou prvním předpoklady k pokroku"</h1>
       <button className="button1" onClick={setRandomColor}>
-        Change Color
+        <p id="chngClrBtnText">Change Color</p>
       </button>
       <div className="container">
         <div className="row">
@@ -62,24 +62,8 @@ function SecondPage() {
             fundamenty, které React přinesl.
           </div>
         </div>
-        <h2>
-          <a href="https://angel-wings19.webnode.cz/">Whisky</a>
-        </h2>
-        <h3>
-          <a href="https://doprava-a-oprava-sro.business.site/?utm_source=gmb&utm_medium=referral">
-            MY Business
-          </a>
-        </h3>
-        <h4>
-          <a href="https://doprava-oprava.cz/?preview_id=233&preview_nonce=21ef8c292f&_thumbnail_id=-1&preview=true">
-            GreenPlanet
-          </a>
-        </h4>
-        <h5>
-          <a href="https://stehovaci-prace9.webnode.cz/">Stehovaci prace</a>
-        </h5>
       </div>
-      <h1>COPYRIGHT ©company</h1>
+      <h2>COPYRIGHT ©company</h2>
     </div>
   );
 }
