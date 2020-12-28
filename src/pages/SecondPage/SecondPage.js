@@ -60,6 +60,9 @@ function SecondPage() {
             se však ukázalo, že došlo k pouze nepochopení základního konceptu a
             nejen FE vývojáři si začli rychle osvojovat a užívat nové
             fundamenty, které React přinesl.
+            <p>
+              V případě , že Vás naše stránka zaujala neváhejte nas kontakovat
+            </p>
           </div>
         </div>
       </div>
