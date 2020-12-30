@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import facebook from "../../img/facebook_img.jpg";
 import tic from "../../img/tic_img.jpg";
@@ -14,15 +14,13 @@ import "../pages.css";
 
 function FirstPage() {
   const [jurko, setJurko] = useState(null);
+  const [isDay, setIsDay] = useState(null);
 
-  /*let d = new Date();
-  if (d.getHours() > 5 && d.getHours() < 18) document.write("Dobrý den</br>");
-  else document.write("Dobrý večer</br>");
-
-  for (let i = 3; i < 5; i++) {
-    document.write("bubu bu<br />");
-  }
-  document.write("Viki!");*/
+  useEffect(() => {
+    let d = new Date();
+    if (d.getHours() > 6 && d.getHours() < 18) setIsDay(true);
+    else setIsDay(false);
+  }, [isDay]);
 
   const writeLang = (language) => {
     setJurko(language);
@@ -133,6 +131,7 @@ function FirstPage() {
         <div className="result" hidden={jurko ? false : true}>
           {jurko}
         </div>
+        <div className="result">{isDay ? "Dobrý den" : "Dobrý večer"}</div>
       </div>
     </div>
   );
