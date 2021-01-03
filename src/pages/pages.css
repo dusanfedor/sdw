@@ -105,3 +105,18 @@ li {
   flex-grow: 1;
   max-width: 100%;
 }
+
+.col-2,
+.col-4,
+.col-10 {
+  border: 1px solid;
+  text-align: center;
+}
+
+.container {
+  width: 20%;
+  margin-left: 10px;
+  padding-left: 10px;
+  color: black;
+  height: auto;
+}
