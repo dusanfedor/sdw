@@ -15,7 +15,7 @@ function SecondPage() {
       <button className="button1" onClick={setRandomColor}>
         <p id="chngClrBtnText">Change Color</p>
       </button>
-      <div className="container">
+      <div className="container1">
         <div className="row">
           <nav className="col-md-auto navbar">
             <ul className="navbar-nav">
