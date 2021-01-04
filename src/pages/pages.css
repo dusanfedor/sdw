@@ -95,7 +95,7 @@ li {
   display: inline;
 }
 
-.row {
+roww {
   display: flex;
   flex-wrap: wrap;
 }
@@ -109,14 +109,36 @@ li {
 .col-2,
 .col-4,
 .col-10 {
-  border: 1px solid;
-  text-align: center;
+  border: 1px solid rgb(194, 204, 243);
+  margin: 1px px;
 }
 
 .container {
-  width: 20%;
-  margin-left: 10px;
+  margin-left: 50px;
   padding-left: 10px;
+  padding-top: 10rem;
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+.row {
+  height: 5rem;
+  width: 30rem;
+  border: black;
+}
+
+.col-10 {
+  background-color: rgb(195, 195, 241);
+  text-shadow: 4px 3px 3px white;
+  border-radius: 10% / 30%;
   color: black;
-  height: auto;
+  text-align: right;
+  margin-bottom: 2%;
+}
+
+.col-2,
+.col-4 {
+  border-radius: 10% / 30%;
+  background-color: #aaa6aaad;
+  text-shadow: 4px 3px 3px white;
 }
