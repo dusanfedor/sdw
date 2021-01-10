@@ -3,6 +3,16 @@ import React, { useState } from "react";
 import "../pages.css";
 
 function FirstPage() {
+  const [display, setDisplay] = useState("0");
+
+  function displayInput(input) {
+    setDisplay(display + input);
+  }
+
+  function clear() {
+    setDisplay("0");
+  }
+
   function add(a, b) {
     const result = a + b;
     alert(result);
@@ -47,7 +57,7 @@ function FirstPage() {
     <div className="body2">
       <div className="container">
         <div className="row">
-          <div className="col-10">display</div>
+          <div className="col-10">{display}</div>
         </div>
 
         <div className="row">
@@ -58,7 +68,9 @@ function FirstPage() {
             <button className="calcBtn">CE</button>
           </div>
           <div className="col-2">
-            <button className="calcBtn">C</button>
+            <button className="calcBtn" onClick={clear}>
+              C
+            </button>
           </div>
           <div className="col-2">
             <button className="calcBtn">±</button>
@@ -124,7 +136,9 @@ function FirstPage() {
 
         <div className="row">
           <div className="col-4">
-            <button className="calcBtn">0</button>
+            <button className="calcBtn" onClick={() => displayInput("0")}>
+              0
+            </button>
           </div>
           <div className="col-2">
             <button className="calcBtn">.</button>
