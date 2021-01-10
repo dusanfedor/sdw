@@ -13,12 +13,8 @@ function FirstPage() {
     alert(result);
   }
 
-  function negate(a) {
-    const result = alert(result);
-  }
-
-  function root(a) {
-    const result = Math.sqrt(a);
+  function multiply(a, b) {
+    const result = a * b;
     alert(result);
   }
 
@@ -27,8 +23,18 @@ function FirstPage() {
     alert(result);
   }
 
-  function multiply(a, b) {
-    const result = a * b;
+  function square(a) {
+    const result = a * a;
+    alert(result);
+  }
+
+  function root(a) {
+    const result = Math.sqrt(a);
+    alert(result);
+  }
+
+  function negate(a) {
+    const result = 0 - a;
     alert(result);
   }
 
@@ -57,7 +63,7 @@ function FirstPage() {
           <div class="col-2">8</div>
           <div class="col-2">9</div>
           <div class="col-2">/</div>
-          <div class="col-2">%</div>
+          <div class="col-2">x²</div>
         </div>
 
         <div class="row">
