@@ -46,46 +46,92 @@ function FirstPage() {
   return (
     <div className="body2">
       <div className="container">
-        <div class="row">
-          <div class="col-10">display</div>
+        <div className="row">
+          <div className="col-10">display</div>
         </div>
 
-        <div class="row">
-          <div class="col-2">←</div>
-          <div class="col-2">CE</div>
-          <div class="col-2">C</div>
-          <div class="col-2">±</div>
-          <div class="col-2">√</div>
+        <div className="row">
+          <div className="col-2">
+            <button className="calcBtn">←</button>
+          </div>
+          <div className="col-2">
+            <button className="calcBtn">CE</button>
+          </div>
+          <div className="col-2">
+            <button className="calcBtn">C</button>
+          </div>
+          <div className="col-2">
+            <button className="calcBtn">±</button>
+          </div>
+          <div className="col-2">
+            <button className="calcBtn">√</button>
+          </div>
         </div>
 
-        <div class="row">
-          <div class="col-2">7</div>
-          <div class="col-2">8</div>
-          <div class="col-2">9</div>
-          <div class="col-2">/</div>
-          <div class="col-2">x²</div>
+        <div className="row">
+          <div className="col-2">
+            <button className="calcBtn">7</button>
+          </div>
+          <div className="col-2">
+            <button className="calcBtn">8</button>
+          </div>
+          <div className="col-2">
+            <button className="calcBtn">9</button>
+          </div>
+          <div className="col-2">
+            <button className="calcBtn">/</button>
+          </div>
+          <div className="col-2">
+            <button className="calcBtn">x²</button>
+          </div>
         </div>
 
-        <div class="row">
-          <div class="col-2">4</div>
-          <div class="col-2">5</div>
-          <div class="col-2">6</div>
-          <div class="col-2">*</div>
-          <div class="col-2">1/x</div>
+        <div className="row">
+          <div className="col-2">
+            <button className="calcBtn">4</button>
+          </div>
+          <div className="col-2">
+            <button className="calcBtn">5</button>
+          </div>
+          <div className="col-2">
+            <button className="calcBtn">6</button>
+          </div>
+          <div className="col-2">
+            <button className="calcBtn">*</button>
+          </div>
+          <div className="col-2">
+            <button className="calcBtn">1/x</button>
+          </div>
         </div>
 
-        <div class="row">
-          <div class="col-2">1</div>
-          <div class="col-2">2</div>
-          <div class="col-2">3</div>
-          <div class="col-2">+</div>
-          <div class="col-2">-</div>
+        <div className="row">
+          <div className="col-2">
+            <button className="calcBtn">1</button>
+          </div>
+          <div className="col-2">
+            <button className="calcBtn">2</button>
+          </div>
+          <div className="col-2">
+            <button className="calcBtn">3</button>
+          </div>
+          <div className="col-2">
+            <button className="calcBtn">+</button>
+          </div>
+          <div className="col-2">
+            <button className="calcBtn">-</button>
+          </div>
         </div>
 
-        <div class="row">
-          <div class="col-4">0</div>
-          <div class="col-2">.</div>
-          <div class="col-4">=</div>
+        <div className="row">
+          <div className="col-4">
+            <button className="calcBtn">0</button>
+          </div>
+          <div className="col-2">
+            <button className="calcBtn">.</button>
+          </div>
+          <div className="col-4">
+            <button className="calcBtn">=</button>
+          </div>
         </div>
       </div>
     </div>
