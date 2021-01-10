@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 import "../pages.css";
 
@@ -37,10 +37,6 @@ function FirstPage() {
     alert(result);
   }
 
-  useEffect(() => {
-    getFraction(10);
-  });
-
   return (
     <div className="body2">
       <div className="container">
@@ -53,7 +49,7 @@ function FirstPage() {
           <div class="col-2">CE</div>
           <div class="col-2">C</div>
           <div class="col-2">±</div>
-          <div class="col-2">√</div> {/* root */}
+          <div class="col-2">√</div>
         </div>
 
         <div class="row">
