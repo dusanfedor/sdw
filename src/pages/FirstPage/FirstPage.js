@@ -4,18 +4,23 @@ import "../pages.css";
 
 function FirstPage() {
   const [display, setDisplay] = useState("0");
+  const unrepeatable = ["+", "-", "*", "/", "."];
 
   function displayInput(input) {
-    // TODO 1: ak pises viac znamienok po sebe, tak sa zobrazi vzdy len to posledne, na ktore kliknes
-    // TODO 2: nula nemoze byt na zaciatku cisla (ak to nie je len 0 alebo v ramci desatinneho cisla)
-    // https://www.itnetwork.cz/javascript/zaklady/javascript-js-tutorial-datove-typy-retezce-cisla-funkce
-    // https://www.itnetwork.cz/javascript/zaklady/javascript-tutorial-podminky
-    // https://www.itnetwork.cz/javascript/zaklady/javascript-tutorial-cykly-for-while
-    // https://www.itnetwork.cz/javascript/zaklady/javascript-tutorial-zaciname-s-javascriptem-podminky-cykly-pole-svatky
-    let result = display + input;
+    // OFS 1: nula nemoze byt na zaciatku cisla (ak to nie je len 0 alebo v ramci desatinneho cisla)
+    // OFS 2: ak bude v ramci jedneho cisla viac desatinnych ciarok, tak zostane len ta prva
 
-    if (result == "00") {
-      result = "0";
+    let result = display;
+    const last = display[display.length - 1];
+
+    if (unrepeatable.indexOf(input) == -1 && result == "0") {
+      result = "";
+    }
+
+    if (unrepeatable.indexOf(last) != -1 && unrepeatable.indexOf(input) != -1) {
+      result = result.replace(/.$/, input);
+    } else {
+      result += input;
     }
 
     setDisplay(result);
@@ -26,7 +31,12 @@ function FirstPage() {
   }
 
   function evaluate() {
-    setDisplay("0"); // TODO: prerobit na vypocet prikladu
+    // TODO: ako nahle sa klikne "=", tak to vypise validny priklad
+
+    let result = display;
+    const last = display[display.length - 1];
+
+    alert(result);
   }
 
   function add(a, b) {
@@ -112,7 +122,7 @@ function FirstPage() {
             </button>
           </div>
           <div className="col-2">
-            <button className="calcBtn" onClick={() => displayInput(" / ")}>
+            <button className="calcBtn" onClick={() => displayInput("/")}>
               /
             </button>
           </div>
@@ -138,7 +148,7 @@ function FirstPage() {
             </button>
           </div>
           <div className="col-2">
-            <button className="calcBtn" onClick={() => displayInput(" * ")}>
+            <button className="calcBtn" onClick={() => displayInput("*")}>
               *
             </button>
           </div>
@@ -164,12 +174,12 @@ function FirstPage() {
             </button>
           </div>
           <div className="col-2">
-            <button className="calcBtn" onClick={() => displayInput(" + ")}>
+            <button className="calcBtn" onClick={() => displayInput("+")}>
               +
             </button>
           </div>
           <div className="col-2">
-            <button className="calcBtn" onClick={() => displayInput(" - ")}>
+            <button className="calcBtn" onClick={() => displayInput("-")}>
               -
             </button>
           </div>
