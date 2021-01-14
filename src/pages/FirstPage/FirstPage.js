@@ -7,8 +7,8 @@ function FirstPage() {
   const unrepeatable = ["+", "-", "*", "/", "."];
 
   function displayInput(input) {
-    // OFS 1: nula nemoze byt na zaciatku cisla (ak to nie je len 0 alebo v ramci desatinneho cisla)
-    // OFS 2: ak bude v ramci jedneho cisla viac desatinnych ciarok, tak zostane len ta prva
+    // TODO: nula nemoze byt na zaciatku cisla (ak to nie je len 0 alebo v ramci desatinneho cisla)
+    // TODO: ak bude v ramci jedneho cisla viac desatinnych ciarok, tak zostane len ta prva
 
     let result = display;
     const last = display[display.length - 1];
@@ -31,10 +31,14 @@ function FirstPage() {
   }
 
   function evaluate() {
-    // TODO: ako nahle sa klikne "=", tak to vypise validny priklad
-
     let result = display;
     const last = display[display.length - 1];
+
+    if (unrepeatable.indexOf(last) != -1) {
+      result = result.replace(/.$/, "");
+    }
+
+    // TODO: dorobit vypocet
 
     alert(result);
   }
