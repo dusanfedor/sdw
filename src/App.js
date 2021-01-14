@@ -8,10 +8,10 @@ function App() {
   return (
     <Switch>
       <Route exact path="/">
-        <Redirect to="/first" />
+        <Redirect to="/second" />
       </Route>
       <Route exact path="/">
-        <Redirect to="/first" />
+        <Redirect to="/second" />
       </Route>
       <Route exact path="/first" component={FirstPage} />
       <Route exact path="/second" component={SecondPage} />
