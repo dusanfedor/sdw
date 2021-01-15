@@ -13,11 +13,14 @@ function FirstPage() {
     let result = display;
     const last = display[display.length - 1];
 
-    if (unrepeatable.indexOf(input) == -1 && result == "0") {
+    if (unrepeatable.indexOf(input) === -1 && result === "0") {
       result = "";
     }
 
-    if (unrepeatable.indexOf(last) != -1 && unrepeatable.indexOf(input) != -1) {
+    if (
+      unrepeatable.indexOf(last) !== -1 &&
+      unrepeatable.indexOf(input) !== -1
+    ) {
       result = result.replace(/.$/, input);
     } else {
       result += input;
@@ -34,7 +37,7 @@ function FirstPage() {
     let result = display;
     const last = display[display.length - 1];
 
-    if (unrepeatable.indexOf(last) != -1) {
+    if (unrepeatable.indexOf(last) !== -1) {
       result = result.replace(/.$/, "");
     }
 
@@ -43,6 +46,7 @@ function FirstPage() {
     alert(result);
   }
 
+  /*
   function add(a, b) {
     const result = a + b;
   }
@@ -81,6 +85,7 @@ function FirstPage() {
     const result = 1 / a;
     setDisplay(result);
   }
+  */
 
   return (
     <div className="body2">
