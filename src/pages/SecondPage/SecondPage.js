@@ -9,18 +9,26 @@ function SecondPage() {
 
     const vstup1 = "number #1";
     const vstup2 = "[You] are my";
+    const vstup3 = "datum:961005,prveMeno:Juraj,druheMeno:Bacovcin";
 
     /**********************************/
 
     // Retazec = string!
     // Uloha 1a: Chcem, aby si zo vstup1 a vstup2 bez toho, aby si ich priamo zmenil, dostal "[VSTUP2] [VSTUP1]!"
 
-    let vystup = vstup2 + " " + vstup1 + "!";
-    vystup = vystup.toUpperCase();
+    let vystup1 = vstup2 + " " + vstup1 + "!";
+    vystup1 = vystup1.toUpperCase();
 
     // Uloha 1b: Nechcem, aby som tam mal specialne znaky (staci len @, #, $, %, ^, &, *, [, ])
 
-    zmenVysledok(vystup);
+    const znaky = ["@", "#", "$", "%", "^", "&", "*", "[", "]"];
+    znaky.forEach(function (polozka) {
+      vystup1 = vystup1.replace(polozka, "");
+    });
+
+    // Uloha 2: Chcem, aby si zo vstup3 dostal len "[PRVEMENO DRUHEMENO]"
+
+    zmenVysledok();
 
     /**********************************/
   }
