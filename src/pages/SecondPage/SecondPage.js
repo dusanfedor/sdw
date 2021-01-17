@@ -18,7 +18,7 @@ function SecondPage() {
     let vystup = vstup2 + " " + vstup1 + "!";
     vystup = vystup.toUpperCase();
 
-    // Uloha 1b: Nechcem, aby som tam mal specialne znaky (cokolvek okrem pismen a cisel)
+    // Uloha 1b: Nechcem, aby som tam mal specialne znaky (staci len @, #, $, %, ^, &, *, [, ])
 
     zmenVysledok(vystup);
 
