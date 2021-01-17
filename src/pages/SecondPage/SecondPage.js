@@ -6,15 +6,21 @@ function SecondPage() {
 
   function otestuj() {
     // PRIESTOR NA TESTOVANIE
-    const vstup1 = "World";
-    const vstup2 = "Hello";
+
+    const vstup1 = "number #1";
+    const vstup2 = "[You] are my";
 
     /**********************************/
 
     // Retazec = string!
-    // Uloha 1: Chcem, aby si zo vstup1 a vstup2 bez toho, aby si ich priamo zmenil, dostal "[VSTUP2] [VSTUP1]!"
+    // Uloha 1a: Chcem, aby si zo vstup1 a vstup2 bez toho, aby si ich priamo zmenil, dostal "[VSTUP2] [VSTUP1]!"
 
-    zmenVysledok();
+    let vystup = vstup2 + " " + vstup1 + "!";
+    vystup = vystup.toUpperCase();
+
+    // Uloha 1b: Nechcem, aby som tam mal specialne znaky (cokolvek okrem pismen a cisel)
+
+    zmenVysledok(vystup);
 
     /**********************************/
   }
