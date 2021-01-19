@@ -26,9 +26,16 @@ function SecondPage() {
       vystup1 = vystup1.replace(polozka, "");
     });
 
-    // Uloha 2: Chcem, aby si zo vstup3 dostal len "[PRVEMENO DRUHEMENO]"
+    // Uloha 2: Chcem, aby si zo vstup3 dostal len "[PRVEMENO] [DRUHEMENO]"
+    // const vstup3 = "datum:961005,prveMeno:Juraj,druheMeno:Bacovcin";
 
-    zmenVysledok();
+    let prve = vstup3.slice(22, 27);
+    let druhe = vstup3.slice(38, 47);
+    let meno = prve + " " + druhe;
+
+    meno = meno.toUpperCase();
+
+    zmenVysledok(meno);
 
     /**********************************/
   }
