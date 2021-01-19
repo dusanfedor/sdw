@@ -29,10 +29,15 @@ function SecondPage() {
     // Uloha 2: Chcem, aby si zo vstup3 dostal len "[PRVEMENO] [DRUHEMENO]"
     // const vstup3 = "datum:961005,prveMeno:Juraj,druheMeno:Bacovcin";
 
-    let prve = vstup3.slice(22, 27);
-    let druhe = vstup3.slice(38, 47);
-    let meno = prve + " " + druhe;
+    let prve = vstup3.slice(vstup3.indexOf("prveMeno"), vstup3.length);
+    prve = prve.slice(prve.indexOf(":") + 1, prve.indexOf(","));
 
+    let druhePoziciaZaciatok = vstup3.indexOf("druheMeno");
+    let druhePoziciaKoniec = vstup3.length;
+    let druhe = vstup3.slice(druhePoziciaZaciatok, druhePoziciaKoniec);
+    druhe = druhe.replace("druheMeno:", "");
+
+    let meno = prve + " " + druhe;
     meno = meno.toUpperCase();
 
     zmenVysledok(meno);
