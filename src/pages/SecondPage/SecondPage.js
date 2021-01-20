@@ -9,7 +9,7 @@ function SecondPage() {
 
     const vstup1 = "number #1";
     const vstup2 = "[You] are my";
-    const vstup3 = "datum:961005,prveMeno:Juraj,druheMeno:Bacovcin";
+    const vstup3 = "datum:961005,prveMeno:tralalala,druheMeno:tralalala";
 
     /**********************************/
 
@@ -29,13 +29,24 @@ function SecondPage() {
     // Uloha 2: Chcem, aby si zo vstup3 dostal len "[PRVEMENO] [DRUHEMENO]"
     // const vstup3 = "datum:961005,prveMeno:Juraj,druheMeno:Bacovcin";
 
-    let prve = vstup3.slice(vstup3.indexOf("prveMeno"), vstup3.length);
-    prve = prve.slice(prve.indexOf(":") + 1, prve.indexOf(","));
+    let koniec;
 
-    let druhePoziciaZaciatok = vstup3.indexOf("druheMeno");
-    let druhePoziciaKoniec = vstup3.length;
-    let druhe = vstup3.slice(druhePoziciaZaciatok, druhePoziciaKoniec);
-    druhe = druhe.replace("druheMeno:", "");
+    let prve = vstup3.slice(vstup3.indexOf("prveMeno"), vstup3.length);
+    if (true) {
+      // koniec musi byt indexof ciarka
+    } else {
+      // koniec musi byt az dlzka daneho retazca
+    }
+    prve = prve.slice(prve.indexOf(":") + 1, koniec);
+
+    let druhe = vstup3.slice(vstup3.indexOf("druheMeno"), vstup3.length);
+    // podmienka musi ist i sem
+    druhe = druhe.slice(druhe.indexOf(":") + 1, koniec);
+
+    // let druhePoziciaZaciatok = vstup3.indexOf("druheMeno");
+    //let druhePoziciaKoniec = vstup3.length;
+    //let druhe = vstup3.slice(druhePoziciaZaciatok, druhePoziciaKoniec);
+    //druhe = druhe.replace("druheMeno:", "");
 
     let meno = prve + " " + druhe;
     meno = meno.toUpperCase();
