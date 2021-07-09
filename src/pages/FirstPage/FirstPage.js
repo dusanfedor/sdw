@@ -1,216 +1,104 @@
-import React, { useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 
 import "../pages.css";
 
 function FirstPage() {
-  const [display, setDisplay] = useState("0");
-  const unrepeatable = ["+", "-", "*", "/", "."];
+  const [dogs, setDogs] = useState(null);
+  const [dad, setDad] = useState(null);
+  const [age, setAge] = useState(null);
+  const [live, setLive] = useState(null);
+  const [timer, setTimer] = useState(null);
+  const [day, setDay] = useState(null);
 
-  function displayInput(input) {
-    // TODO: nula nemoze byt na zaciatku cisla (ak to nie je len 0 alebo v ramci desatinneho cisla)
-    // TODO: ak bude v ramci jedneho cisla viac desatinnych ciarok, tak zostane len ta prva
-
-    let result = display;
-    const last = display[display.length - 1];
-
-    if (unrepeatable.indexOf(input) === -1 && result === "0") {
-      result = "";
-    }
-
-    if (
-      unrepeatable.indexOf(last) !== -1 &&
-      unrepeatable.indexOf(input) !== -1
-    ) {
-      result = result.replace(/.$/, input);
-    } else {
-      result += input;
-    }
-
-    setDisplay(result);
+  function den() {
+    if (!day) {
+      const date = new Date().toLocaleDateString();
+      setDay(date);
+    } else setDay("");
   }
 
-  function clear() {
-    setDisplay("0");
+  function cas() {
+    if (!timer) {
+      const time = new Date().toLocaleTimeString();
+      const newtime = time;
+      setTimer(newtime);
+    } else setTimer("");
   }
 
-  function evaluate() {
-    let result = display;
-    const last = display[display.length - 1];
-
-    if (unrepeatable.indexOf(last) !== -1) {
-      result = result.replace(/.$/, "");
-    }
-
-    // TODO: dorobit vypocet
-
-    alert(result);
+  function zivotopis() {
+    if (!live) {
+      const opis =
+        " VZDĚLÁNÍ: SOU Stavebné, Košice ; automechanik / 1992 - 1995 ; KURZY A ŠKOLENÍ: Faurecia Slovakia GAP liderska akademia / 2012 - 2012 ; PRŮBĚH ZAMĚSTNÁNÍ: Na volné nozre -01.12.2020 - dosud, Programováni:  Vytvářim projekty na seskupení e-shopu kvůli znížení výdaju za reklamy. Vytvářim e-shopy, weby, blogy. Programuji v  Java script, CSS, PHP, v programu React app . Doprava a oprava s.r.o od 01.11.2019 - 30.11.2020, pozice Manažér , náplň -Zajišťování zakázak a zastupováni firmy na jednánich, vedení - evidense práce, docházky, hodnotení zaměstnanců, príprava podkladů pro mzdy, daňová evidece - podklady na účetníctvi, archivace výdaju a zisků, eliminace výdajů . Ideal automotiv Tachov od 2017 - 2019, Mistr ve výrobě = zajištění plynulé výroby, práce v excelu, zaznamenávání docházky, dohled nad dodržováním BOZP, podávání zpráv o produkci, rozvoj tím lídrou, zdokonalovaní pracovního procesu ve spolupráci s procesní inženýři . Faurecia Slovakia od 2011 - 2017, pozice: Production Manager náplň práce,  Zajištění plynulé výroby na svěřených projektech, přesuny informací vedení firmy, rozdělení objednávek na svěřené projekty práce v excelu, tvorba kontingenčných tabulek, grafu produkce, grafu scrapu grafu PPM, zaznamenávání docházkyteem tídrom, dohled nad dodržováním BOZP, podávání zpráv o produkci vedení firmy na bázi denních mítingu a návrhy na zlepšení nedustatku, vývoj team lídrou, zdokonalovaní výrobního procesu ve spolupráci s procesními inženýři. Faurecia Slovakia od 2010 - 2011, pozice= Gap líder";
+      setLive(opis);
+    } else setLive("");
   }
 
-  /*
-  function add(a, b) {
-    const result = a + b;
+  function zacinam() {
+    if (!dogs) {
+      const syn = " syn:Ing.Juraj Bacovcin";
+      const dcera = "dcéra:Viki Fedorova;";
+      const máma = " máma:Najka Fedorova; ";
+      const family = máma + "" + "" + dcera + "" + "" + syn;
+
+      setDogs(family);
+    } else setDogs("");
   }
 
-  function subtract(a, b) {
-    const result = a - b;
-    alert(result);
+  function object() {
+    if (!dad) {
+      const firstName = "Dusan Fedor";
+      const fullName = firstName;
+
+      setDad(fullName);
+    } else setDad("");
   }
 
-  function multiply(a, b) {
-    const result = a * b;
-    alert(result);
-  }
+  function years() {
+    if (!age) {
+      const mojvek = "43";
 
-  function divide(a, b) {
-    const result = a / b;
-    alert(result);
+      setAge(mojvek);
+    } else setAge("");
   }
-
-  function square(a) {
-    const result = a * a;
-    alert(result);
-  }
-
-  function root(a) {
-    const result = Math.sqrt(a);
-    alert(result);
-  }
-
-  function negate(a) {
-    const result = 0 - a;
-    alert(result);
-  }
-
-  function getFraction(a) {
-    const result = 1 / a;
-    setDisplay(result);
-  }
-  */
 
   return (
-    <div className="body2">
-      <div className="container">
-        <div className="row">
-          <div className="col-10">{display}</div>
-        </div>
+    <div className="body">
+      <div className="sobota">{day}</div>
+      <div className="nedela">
+        <button onClick={den}>
+          <b>Dátum:</b>
+        </button>
+      </div>
+      <div className="quartz">{timer}</div>
+      <div className="oomega">
+        <button onClick={cas}>
+          <b>Čas:</b>
+        </button>
+      </div>
+      <div className="fullName">{dad}</div>
+      <div className="lastName">
+        <button onClick={object}>
+          <b>Meno</b>
+        </button>
+      </div>
 
-        <div className="row">
-          <div className="col-2">
-            <button className="calcBtn">←</button>
-          </div>
-          <div className="col-2">
-            <button className="calcBtn">CE</button>
-          </div>
-          <div className="col-2">
-            <button className="calcBtn" onClick={clear}>
-              C
-            </button>
-          </div>
-          <div className="col-2">
-            <button className="calcBtn">±</button>
-          </div>
-          <div className="col-2">
-            <button className="calcBtn">√</button>
-          </div>
-        </div>
-
-        <div className="row">
-          <div className="col-2">
-            <button className="calcBtn" onClick={() => displayInput("7")}>
-              7
-            </button>
-          </div>
-          <div className="col-2">
-            <button className="calcBtn" onClick={() => displayInput("8")}>
-              8
-            </button>
-          </div>
-          <div className="col-2">
-            <button className="calcBtn" onClick={() => displayInput("9")}>
-              9
-            </button>
-          </div>
-          <div className="col-2">
-            <button className="calcBtn" onClick={() => displayInput("/")}>
-              /
-            </button>
-          </div>
-          <div className="col-2">
-            <button className="calcBtn">x²</button>
-          </div>
-        </div>
-
-        <div className="row">
-          <div className="col-2">
-            <button className="calcBtn" onClick={() => displayInput("4")}>
-              4
-            </button>
-          </div>
-          <div className="col-2">
-            <button className="calcBtn" onClick={() => displayInput("5")}>
-              5
-            </button>
-          </div>
-          <div className="col-2">
-            <button className="calcBtn" onClick={() => displayInput("6")}>
-              6
-            </button>
-          </div>
-          <div className="col-2">
-            <button className="calcBtn" onClick={() => displayInput("*")}>
-              *
-            </button>
-          </div>
-          <div className="col-2">
-            <button className="calcBtn">1/x</button>
-          </div>
-        </div>
-
-        <div className="row">
-          <div className="col-2">
-            <button className="calcBtn" onClick={() => displayInput("1")}>
-              1
-            </button>
-          </div>
-          <div className="col-2">
-            <button className="calcBtn" onClick={() => displayInput("2")}>
-              2
-            </button>
-          </div>
-          <div className="col-2">
-            <button className="calcBtn" onClick={() => displayInput("3")}>
-              3
-            </button>
-          </div>
-          <div className="col-2">
-            <button className="calcBtn" onClick={() => displayInput("+")}>
-              +
-            </button>
-          </div>
-          <div className="col-2">
-            <button className="calcBtn" onClick={() => displayInput("-")}>
-              -
-            </button>
-          </div>
-        </div>
-
-        <div className="row">
-          <div className="col-4">
-            <button className="calcBtn" onClick={() => displayInput("0")}>
-              0
-            </button>
-          </div>
-          <div className="col-2">
-            <button className="calcBtn" onClick={() => displayInput(".")}>
-              .
-            </button>
-          </div>
-          <div className="col-4">
-            <button className="calcBtn" onClick={evaluate}>
-              =
-            </button>
-          </div>
-        </div>
+      <div className="numero">{age}</div>
+      <div className="rumero">
+        <button onClick={years}>
+          <b>Můj věk</b>
+        </button>
+      </div>
+      <div className="zivot">{live}</div>
+      <div className="zivotopis">
+        <button onClick={zivotopis}>
+          <b>Zivotopis</b>
+        </button>
+      </div>
+      <div className="result">{dogs}</div>
+      <div className="testing">
+        <button onClick={zacinam}>
+          <b>Moje rodina</b>
+        </button>
       </div>
     </div>
   );
