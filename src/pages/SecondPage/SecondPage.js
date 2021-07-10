@@ -22,7 +22,7 @@ function SecondPage() {
               <li className="nav-item">
                 <a
                   className="nav-link"
-                  href="https://doprava-oprava.jednoduse.cz/"
+                  href="www.modriandel.cz"
                 >
                   Stehovani
                 </a>
